@@ -53,9 +53,9 @@ const NewsCard = ({ news1 }) => {
       />
       <div className={`absolute bottom-0 left-0 right-0 p-6`}>
         <h3
-          className={`text-2xl font-bold font-Rubik transition-all duration-700 ${
-            hovered ? "text-gray-600 " : "text-white font-outline-1"
-          } leading-tight mb-2`}
+          className={`text-2xl font-bold transition-all duration-700 ${
+            hovered ? "text-gray-600 " : "text-white font-outline-4"
+          } `}
         >
           {truncatedTitle}
         </h3>
@@ -63,7 +63,7 @@ const NewsCard = ({ news1 }) => {
         {!showBackground ? (
           <>
             <h2
-              className={`text-xl font-serif text-gray-900 leading-tight transition-all duration-700 `}
+              className={`text-xl text-gray-900 leading-tight transition-all duration-700 `}
             >
               {truncatedDescription}
             </h2>
