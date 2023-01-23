@@ -1,13 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Roboto:wght@300&display=swap');
 @layer base {
   .font-outline-1 {
     -webkit-text-stroke: 1px black;
   }
   .font-outline-0 {
     -webkit-text-stroke: 0px black;
+  }
+  h3{
+    font-family: 'Roboto', sans-serif;
+  }
+  h2{
+    font-family: 'Dosis', sans-serif;
   }
 }
