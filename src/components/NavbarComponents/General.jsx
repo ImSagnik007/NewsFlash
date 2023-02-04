@@ -10,7 +10,7 @@ const General = () => {
           `https://newsapi.org/v2/top-headlines/sources?category=general&apiKey=58a6e0b58a6243b8900dc02ef32c8d03`
         );
         const data = await response.json();
-        setNews(data.articles);
+        setNews(data.sources);
       } catch (error) {
         console.error(error);
       }
