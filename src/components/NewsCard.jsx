@@ -88,6 +88,7 @@ const NewsCard = ({ news1 }) => {
                   variant="contained"
                   color="primary"
                   className="h-70 w-70"
+                  style={{ marginBottom: "1rem" }}
                   onClick={handleClick}
                 >
                   Open
