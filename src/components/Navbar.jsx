@@ -3,8 +3,10 @@ import { AppBar, Toolbar, Typography, Tabs, Tab, Button } from "@mui/material";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import Business from "./NavbarComponents/Business";
 
-const Navbar = () => {
-  const [tabValue, setTabValue] = useState("Business");
+import axios from "axios";
+
+const API_KEY = "58a6e0b58a6243b8900dc02ef32c8d03";
+const Navbar = ({ updateNews }) => {
   return (
     <div>
       <AppBar
