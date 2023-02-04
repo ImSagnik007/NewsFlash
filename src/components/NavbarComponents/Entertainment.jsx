@@ -6,7 +6,7 @@ const Business = () => {
   const [news, setNews] = useState([]);
   const searchNews = async () => {
     const response = await fetch(
-      `https://newsapi.org/v2/top-headlines/sources?category=business&apiKey=58a6e0b58a6243b8900dc02ef32c8d03`
+      `https://newsapi.org/v2/top-headlines/sources?category=entertainment&Key=58a6e0b58a6243b8900dc02ef32c8d03`
     );
     const data = await response.json();
     setNews(data.articles);

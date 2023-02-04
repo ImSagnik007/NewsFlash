@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import axios from "axios";
 import { Button } from "@mui/material";
 import {
   FacebookShareButton,
@@ -67,12 +65,14 @@ const NewsCard = ({ news1 }) => {
           <>
             <div className="mb-3 h-100 flex flex-column justify-around">
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <button
-                  className="h-70 w-100 bg-indigo-500"
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="h-70 w-100"
                   onClick={handleClick}
                 >
                   Open
-                </button>
+                </Button>
                 <div className="mb-3 flex justify-around">
                   <FacebookShareButton url={news1.url}>
                     <FacebookIcon

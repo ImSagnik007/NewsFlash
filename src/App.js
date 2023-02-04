@@ -15,19 +15,6 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const searchNews = async (title) => {
-    if (loading) {
-      return <Loading />;
-    }
-    const response = await fetch(
-      `${API_URL}?q=${title}&sortBy=popularity&apiKey=${apiKey}`
-    );
-    const data = await response.json();
-
-    setNews(data.articles);
-    setLoading(false);
-    console.log(data.articles);
-  };
 
   const searchInitialNews = async () => {
     const response = await fetch(
