@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import axios from "axios";
+import {FacebookShareButton,FacebookIcon,TwitterShareButton,TwitterIcon,WhatsappShareButton,WhatsappIcon,LinkedinShareButton,LinkedinIcon} from "react-share";
 
 const NewsCard = ({ news1 }) => {
   const [showBackground, setShowBackground] = useState(true);
@@ -31,7 +33,7 @@ const NewsCard = ({ news1 }) => {
   return (
     <div
       className={classnames(
-        "w-[270px] h-[300px] relative m-6 bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer box-border transform ",
+        "w-[270px] h-[300px] relative m-6 bg-white rounded-lg shadow-lg overflow-hidden box-border transform ",
         { "scale-x-105 scale-y-105": hovered }
       )}
       onMouseEnter={() => {
@@ -42,7 +44,6 @@ const NewsCard = ({ news1 }) => {
         setShowBackground(true);
         setHovered(false);
       }}
-      onClick={handleClick}
     >
       <img
         src={news1.urlToImage || defaultImageUrl}
@@ -52,6 +53,25 @@ const NewsCard = ({ news1 }) => {
         }`}
       />
       <div className={`absolute bottom-0 left-0 right-0 p-6`}>
+        {hovered?(<>
+            <div className="mb-3 h-100 flex flex-column justify-around">
+              <button className="h-70 w-100 bg-indigo-500" onClick={handleClick}>Open</button>
+              <div className="mb-3 flex justify-around">
+                <FacebookShareButton url={news1.url}>
+                  <FacebookIcon className="h-10 w-10" logoFillColor="white" round={true}></FacebookIcon>
+                </FacebookShareButton>
+                <TwitterShareButton url={news1.url}>
+                  <TwitterIcon className="h-10 w-10" logoFillColor="white" round={true}></TwitterIcon>
+                </TwitterShareButton>
+                <WhatsappShareButton url={news1.url}>
+                  <WhatsappIcon className="h-10 w-10" logoFillColor="white" round={true}></WhatsappIcon>
+                </WhatsappShareButton>
+                <LinkedinShareButton url={news1.url}>
+                  <LinkedinIcon className="h-10 w-10" logoFillColor="white" round={true}></LinkedinIcon>
+                </LinkedinShareButton>
+              </div>
+            </div>
+          </>):null}
         <h3
           className={`text-2xl font-bold transition-all duration-700 ${
             hovered ? "text-gray-600 " : "text-white font-outline-4"
@@ -59,8 +79,8 @@ const NewsCard = ({ news1 }) => {
         >
           {truncatedTitle}
         </h3>
-
-        {!showBackground ? (
+        
+        {/* {!showBackground ? (
           <>
             <h2
               className={`text-xl text-gray-900 leading-tight transition-all duration-700 `}
@@ -68,7 +88,7 @@ const NewsCard = ({ news1 }) => {
               {truncatedDescription}
             </h2>
           </>
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );
