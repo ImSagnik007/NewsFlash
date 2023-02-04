@@ -16,7 +16,17 @@ const Navbar = ({ selectedTab, setSelectedTab }) => {
       >
         <Toolbar>
           <NewspaperIcon />
-          <Typography variant="h5">NewsFlash</Typography>
+
+          <Typography
+            variant="h5"
+            sx={{
+              cursor: "pointer",
+            }}
+            onClick={() => window.location.reload()}
+          >
+            NewsFlash
+          </Typography>
+
           <Tabs textColor="inherit" sx={{ marginLeft: "auto" }}>
             <Tab label="Business" onClick={() => setSelectedTab("Business")} />
             <Tab
