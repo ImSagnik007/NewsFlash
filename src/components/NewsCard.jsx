@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
-import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@mui/material";
 import {
   FacebookShareButton,
@@ -13,17 +12,9 @@ import {
   LinkedinIcon,
 } from "react-share";
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
-    padding: theme.spacing(1),
-  },
-}));
-
 const NewsCard = ({ news1 }) => {
   const [showBackground, setShowBackground] = useState(true);
   const [hovered, setHovered] = useState(false);
-  const classes = useStyles();
 
   const defaultImageUrl =
     "https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png";
@@ -96,7 +87,7 @@ const NewsCard = ({ news1 }) => {
                 <Button
                   variant="contained"
                   color="primary"
-                  className={classes.button}
+                  className="h-70 w-70"
                   onClick={handleClick}
                 >
                   Open
