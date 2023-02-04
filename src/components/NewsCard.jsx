@@ -35,7 +35,7 @@ const NewsCard = ({ news1 }) => {
     : [];
   const truncatedDescription =
     descriptionWords.length > 10
-      ? `${descriptionWords.slice(0, 10).join(" ")}...Read more`
+      ? `${descriptionWords.slice(0, 10).join(" ")}...`
       : news1.description;
 
   return (
