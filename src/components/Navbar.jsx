@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Tabs, Tab, Button } from "@mui/material";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
+import { Link } from "react-router-dom";
 import Business from "./NavbarComponents/Business";
 import Entertainment from "./NavbarComponents/Entertainment";
 

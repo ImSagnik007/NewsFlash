@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
+import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@mui/material";
 import {
   FacebookShareButton,
@@ -12,9 +13,17 @@ import {
   LinkedinIcon,
 } from "react-share";
 
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+    padding: theme.spacing(1),
+  },
+}));
+
 const NewsCard = ({ news1 }) => {
   const [showBackground, setShowBackground] = useState(true);
   const [hovered, setHovered] = useState(false);
+  const classes = useStyles();
 
   const defaultImageUrl =
     "https://www.industry.gov.au/sites/default/files/August%202018/image/news-placeholder-738.png";
@@ -60,7 +69,26 @@ const NewsCard = ({ news1 }) => {
           showBackground ? "" : "opacity-30"
         }`}
       />
-      <div className={`absolute bottom-0 left-0 right-0 p-6`}>
+      <div
+        className={`absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-between`}
+      >
+        <h3
+          className={`text-2xl font-bold transition-all duration-700 ${
+            hovered ? "text-gray-600 " : "text-white font-outline-4"
+          } `}
+        >
+          {truncatedTitle}
+        </h3>
+
+        {!showBackground ? (
+          <>
+            <h2
+              className={`text-xl text-gray-900 leading-tight transition-all duration-700 mb-3`}
+            >
+              {truncatedDescription}
+            </h2>
+          </>
+        ) : null}
         {hovered ? (
           <>
             <div className="mb-3 h-100 flex flex-column justify-around">
@@ -68,7 +96,7 @@ const NewsCard = ({ news1 }) => {
                 <Button
                   variant="contained"
                   color="primary"
-                  className="h-70 w-100"
+                  className={classes.button}
                   onClick={handleClick}
                 >
                   Open
@@ -105,23 +133,6 @@ const NewsCard = ({ news1 }) => {
                 </div>
               </div>
             </div>
-          </>
-        ) : null}
-        <h3
-          className={`text-2xl font-bold transition-all duration-700 ${
-            hovered ? "text-gray-600 " : "text-white font-outline-4"
-          } `}
-        >
-          {truncatedTitle}
-        </h3>
-
-        {!showBackground ? (
-          <>
-            <h2
-              className={`text-xl text-gray-900 leading-tight transition-all duration-700 `}
-            >
-              {truncatedDescription}
-            </h2>
           </>
         ) : null}
       </div>
