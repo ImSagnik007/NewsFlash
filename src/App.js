@@ -62,7 +62,10 @@ const App = () => {
           className="bg-gray-300"
           style={{ display: "grid", gridTemplateColumns: "30% 70%" }}
         >
-          <div style={{ borderRight: "2px solid white" }}>
+          <div
+            className="bg-blue-900"
+            style={{ borderRight: "2px solid white" }}
+          >
             <SideBar />
           </div>
           <div>

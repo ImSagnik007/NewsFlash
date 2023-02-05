@@ -16,7 +16,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="p-10 w-3/10">
+    <div className="p-10 w-3/10 text-gray-50">
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={() => toggleDropdown("firstDropdownOpen")}
@@ -32,7 +32,7 @@ const SideBar = () => {
       {dropdownState.firstDropdownOpen && (
         <ul className="list-disc pl-10">
           <li>IND vs AUS</li>
-          <li>REAL MADRID vs MALLORCA</li>
+          <li>REAL MADRID vs VALENCIA</li>
           <li>HEATS vs SCORCHERS</li>
         </ul>
       )}
