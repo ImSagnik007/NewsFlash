@@ -5,6 +5,7 @@ import LaLiga from "./SideBarComponents/Sports/FootballLeagues/LaLiga";
 import EPL from "./SideBarComponents/Sports/FootballLeagues/EPL";
 import Ligue1 from "./SideBarComponents/Sports/FootballLeagues/Ligue1";
 import { FaChevronRight } from "react-icons/fa";
+import DNA from "react-loader-spinner/dist/loader/Dna";
 
 const SideBar = () => {
   const [dropdownState, setDropdownState] = useState({
