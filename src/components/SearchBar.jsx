@@ -29,9 +29,12 @@ const SearchBar = ({ setNews1, searchTerm1, setSearchTerm1 }) => {
   //   }
 
   return (
-    <div className="search h-16">
+    <div
+      className="w-1/2 mt-24 mr-8 mb-8 ml-8 px-6 py-7 flex align-center items-center rounded-3xl bg-[#1f2123]"
+      style={{ borderRadius: "3rem" }}
+    >
       <input
-        className="flex-1 outline-none "
+        className="flex-1 outline-none text-[#a1a1a1] bg-[#1f2123] pr-4 font-medium"
         placeholder="Search for any news"
         value={searchTerm1}
         onChange={(e) => setSearchTerm1(e.target.value)}

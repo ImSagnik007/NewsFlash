@@ -11,6 +11,7 @@ import Health from "./components/NavbarComponents/Health";
 import Science from "./components/NavbarComponents/Science";
 import Sports from "./components/NavbarComponents/Sports";
 import Technology from "./components/NavbarComponents/Technology";
+import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import { FaSearch } from "react-icons/fa";
 import backgroundImage from "./media/background.jpeg";
@@ -57,14 +58,24 @@ const App = () => {
           setSearchTerm1={setSearchTerm}
         />
 
-        {selectedTab === "" && <NewsCardContainer i={news} />}
-        {selectedTab === "Business" && <Business />}
-        {selectedTab === "Entertainment" && <Entertainment />}
-        {selectedTab === "General" && <General />}
-        {selectedTab === "Health" && <Health />}
-        {selectedTab === "Science" && <Science />}
-        {selectedTab === "Sports" && <Sports />}
-        {selectedTab === "Technology" && <Technology />}
+        <div
+          className="bg-gray-300"
+          style={{ display: "grid", gridTemplateColumns: "30% 70%" }}
+        >
+          <div style={{ borderRight: "2px solid white" }}>
+            <SideBar />
+          </div>
+          <div>
+            {selectedTab === "" && <NewsCardContainer i={news} />}
+            {selectedTab === "Business" && <Business />}
+            {selectedTab === "Entertainment" && <Entertainment />}
+            {selectedTab === "General" && <General />}
+            {selectedTab === "Health" && <Health />}
+            {selectedTab === "Science" && <Science />}
+            {selectedTab === "Sports" && <Sports />}
+            {selectedTab === "Technology" && <Technology />}
+          </div>
+        </div>
 
         <Footer />
       </div>
