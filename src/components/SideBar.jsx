@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import SportsScores from "./SideBarComponents/Sports/SportsScores";
 
 const SideBar = () => {
   const [dropdownState, setDropdownState] = useState({
-    firstDropdownOpen: true,
+    firstDropdownOpen: false,
     secondDropdownOpen: false,
     thirdDropdownOpen: false,
   });
@@ -29,13 +30,7 @@ const SideBar = () => {
           }
         />
       </div>
-      {dropdownState.firstDropdownOpen && (
-        <ul className="list-disc pl-10">
-          <li>IND vs AUS</li>
-          <li>REAL MADRID vs VALENCIA</li>
-          <li>HEATS vs SCORCHERS</li>
-        </ul>
-      )}
+      {dropdownState.firstDropdownOpen && <SportsScores />}
       <div
         className="flex items-center justify-between cursor-pointer mt-10"
         onClick={() => toggleDropdown("secondDropdownOpen")}

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div
       className="text-center p-10 border-t text-gray-100 w-full h-full"
-      style={{ backgroundColor: "#1f9094" }}
+      style={{ backgroundColor: "#215a6e" }}
     >
       <h2>©2023 NewsFlash, Inc.</h2>
     </div>
