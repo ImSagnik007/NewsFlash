@@ -4,6 +4,8 @@ import SportsScores from "./SideBarComponents/Sports/SportsScores";
 import LaLiga from "./SideBarComponents/Sports/FootballLeagues/LaLiga";
 import EPL from "./SideBarComponents/Sports/FootballLeagues/EPL";
 import Ligue1 from "./SideBarComponents/Sports/FootballLeagues/Ligue1";
+import { FaChevronRight } from "react-icons/fa";
+// import DNA from "react-loader-spinner/dist/loader/Dna";
 
 const SideBar = () => {
   const [dropdownState, setDropdownState] = useState({
@@ -46,6 +48,7 @@ const SideBar = () => {
             onClick={() => toggleDropdown("footballDropdownOpen")}
             style={{ borderBottom: "2px solid white" }}
           >
+            <FaChevronRight />
             <h3 className="mr-5"> Football</h3>
             <FaChevronDown
               className={
@@ -60,6 +63,8 @@ const SideBar = () => {
                 onClick={() => toggleDropdown("laligaDropdownOpen")}
                 style={{ borderBottom: "2px solid white" }}
               >
+                <FaChevronRight />
+                <FaChevronRight />
                 <h3 className="mr-5">LaLiga</h3>
                 <FaChevronDown
                   className={
@@ -73,6 +78,8 @@ const SideBar = () => {
                 onClick={() => toggleDropdown("eplDropdownOpen")}
                 style={{ borderBottom: "2px solid white" }}
               >
+                <FaChevronRight />
+                <FaChevronRight />
                 <h3 className="mr-5">EPL</h3>
                 <FaChevronDown
                   className={
@@ -86,6 +93,8 @@ const SideBar = () => {
                 onClick={() => toggleDropdown("ligue1DropdownOpen")}
                 style={{ borderBottom: "2px solid white" }}
               >
+                <FaChevronRight />
+                <FaChevronRight />
                 <h3 className="mr-5">Ligue1</h3>
                 <FaChevronDown
                   className={
@@ -101,6 +110,7 @@ const SideBar = () => {
             onClick={() => toggleDropdown("cricketDropdownOpen")}
             style={{ borderBottom: "2px solid white" }}
           >
+            <FaChevronRight />
             <h3 className="mr-5"> Cricket</h3>
             <FaChevronDown
               className={
