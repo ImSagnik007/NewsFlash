@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import SportsNewsCard from "../SportsNewsCard";
+import Tri from "../../../Loaders/Triangle";
 
 const LaLiga = () => {
   const [news, setNews] = useState(null);
@@ -24,6 +25,7 @@ const LaLiga = () => {
         console.error(error);
       }
     };
+    console.log(news);
     searchNews();
   }, []);
   return (
@@ -34,7 +36,7 @@ const LaLiga = () => {
             <SportsNewsCard news1={news1} className="w-1/4" />
           ))
         ) : (
-          <p>Loading...</p>
+          <Tri />
         )}
       </div>
     </>

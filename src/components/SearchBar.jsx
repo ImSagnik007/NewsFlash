@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "../App.css";
-import Loading from "./Loading";
+import Loading from "./Loaders/Bar";
 
 const API_URL = "https://newsapi.org/v2/everything";
 

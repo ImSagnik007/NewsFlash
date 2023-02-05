@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-import Loading from "./components/Loading";
+import Loading from "./components/Loaders/Bar";
 import "./App.css";
 import NewsCardContainer from "./components/NewsCardContainer";
 import SearchBar from "./components/SearchBar";
@@ -49,7 +49,7 @@ const App = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-col box-border bg-center bg-fixed">
+      <div className="flex justify-center items-center flex-col box-border bg-center bg-fixed w-full h-full">
         <Navbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
         <SearchBar
@@ -59,7 +59,7 @@ const App = () => {
         />
 
         <div
-          className="bg-gray-300"
+          className="bg-gray-300 w-full h-full"
           style={{ display: "grid", gridTemplateColumns: "30% 70%" }}
         >
           <div

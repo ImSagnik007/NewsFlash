@@ -2,6 +2,7 @@ import React from "react";
 import NewsCard from "./NewsCard";
 import "../App.css";
 import LazyLoad from "react-lazy-load";
+import DNA from "./Loaders/DNA";
 
 const NewsCardContainer = ({ i }) => {
   return i?.length > 0 ? (
@@ -11,9 +12,7 @@ const NewsCardContainer = ({ i }) => {
       ))}
     </div>
   ) : (
-    <div className="empty">
-      <h2>No news found</h2>
-    </div>
+    <DNA />
   );
 };
 
