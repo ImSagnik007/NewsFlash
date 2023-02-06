@@ -25,7 +25,7 @@ const LaLiga = () => {
         console.error(error);
       }
     };
-    console.log(news);
+    // console.log(news);
     searchNews();
   }, []);
   return (
