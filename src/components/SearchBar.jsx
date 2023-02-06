@@ -30,7 +30,7 @@ const SearchBar = ({ setNews1, searchTerm1, setSearchTerm1 }) => {
 
   return (
     <div
-      className="w-1/2 mt-24 mr-8 mb-8 ml-8 px-6 py-7 flex align-center items-center rounded-3xl bg-[#1f2123]"
+      className="w-8/10 mt-8 mr-8 mb-8 ml-8 px-6 py-7 flex align-center items-center rounded-3xl bg-[#1f2123]"
       style={{ borderRadius: "3rem" }}
     >
       <input

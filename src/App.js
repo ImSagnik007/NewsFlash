@@ -52,14 +52,8 @@ const App = () => {
       <div className="flex justify-center items-center flex-col box-border bg-center bg-fixed w-full h-full">
         <Navbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
-        <SearchBar
-          setNews1={setNews}
-          searchTerm1={searchTerm}
-          setSearchTerm1={setSearchTerm}
-        />
-
         <div
-          className="bg-gray-300 w-full h-full"
+          className="w-full h-full mt-16"
           style={{ display: "grid", gridTemplateColumns: "30% 70%" }}
         >
           <div
@@ -68,7 +62,12 @@ const App = () => {
           >
             <SideBar />
           </div>
-          <div>
+          <div className="bg-gray-300 flex flex-col">
+            <SearchBar
+              setNews1={setNews}
+              searchTerm1={searchTerm}
+              setSearchTerm1={setSearchTerm}
+            />
             {selectedTab === "" && <NewsCardContainer i={news} />}
             {selectedTab === "Business" && <Business />}
             {selectedTab === "Entertainment" && <Entertainment />}
@@ -79,7 +78,6 @@ const App = () => {
             {selectedTab === "Technology" && <Technology />}
           </div>
         </div>
-
         <Footer />
       </div>
     </>

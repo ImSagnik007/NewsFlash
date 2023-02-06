@@ -3,6 +3,7 @@ import NewsCard from "./NewsCard";
 import "../App.css";
 import LazyLoad from "react-lazy-load";
 import DNA from "./Loaders/DNA";
+import SearchBar from "./SearchBar";
 
 const NewsCardContainer = ({ i }) => {
   return i?.length > 0 ? (
