@@ -57,12 +57,12 @@ const App = () => {
           style={{ display: "grid", gridTemplateColumns: "30% 70%" }}
         >
           <div
-            className="bg-blue-900"
+            className="bg-gray-700 overflow-y-auto h-screen scrolling-touch ::-webkit-scrollbar-thumb"
             style={{ borderRight: "2px solid white" }}
           >
             <SideBar />
           </div>
-          <div className="bg-gray-300 flex flex-col">
+          <div className="bg-gray-300 flex flex-col overflow-y-auto h-screen">
             <SearchBar
               setNews1={setNews}
               searchTerm1={searchTerm}

@@ -22,7 +22,7 @@ const Navbar = ({ selectedTab, setSelectedTab }) => {
             sx={{
               cursor: "pointer",
             }}
-            onClick={() => window.location.reload()}
+            href="#"
           >
             NewsFlash
           </Typography>
