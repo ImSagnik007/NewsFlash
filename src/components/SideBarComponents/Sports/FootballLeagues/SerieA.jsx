@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import SportsNewsCard from "../SportsNewsCard";
+import FootballNewsCard from "../FootballNewsCard";
 import Tri from "../../../Loaders/Triangle";
 
 const SerieA = () => {
@@ -33,7 +33,7 @@ const SerieA = () => {
       <div>
         {news ? (
           news.map((news1) => (
-            <SportsNewsCard news1={news1} className="w-1/4" />
+            <FootballNewsCard news1={news1} className="w-1/4" />
           ))
         ) : (
           <Tri />

@@ -1,6 +1,6 @@
 import React from "react";
 
-const SportsNewsCard = ({ news1 }) => {
+const FootballNewsCard = ({ news1 }) => {
   const handleClick = (event) => {
     event.preventDefault();
     window.open(news1.url, "_blank", "noreferrer");
@@ -30,4 +30,4 @@ const SportsNewsCard = ({ news1 }) => {
   );
 };
 
-export default SportsNewsCard;
+export default FootballNewsCard;
