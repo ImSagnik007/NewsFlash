@@ -57,7 +57,7 @@ const App = () => {
           style={{ display: "grid", gridTemplateColumns: "30% 70%" }}
         >
           <div
-            className="bg-gray-700 overflow-y-auto h-screen scrolling-touch ::-webkit-scrollbar-thumb"
+            className="bg-gray-800 overflow-y-auto h-screen scrolling-touch ::-webkit-scrollbar-thumb"
             style={{ borderRight: "2px solid white" }}
           >
             <SideBar />
