@@ -4,6 +4,7 @@ import EPL from "./SideBarComponents/Sports/FootballLeagues/EPL";
 import SerieA from "./SideBarComponents/Sports/FootballLeagues/SerieA";
 import Bundesliga from "./SideBarComponents/Sports/FootballLeagues/Bundesliga";
 import Ligue1 from "./SideBarComponents/Sports/FootballLeagues/Ligue1";
+import Cricket from "./SideBarComponents/Sports/Cricket";
 import * as fcIcons from "react-icons/fc";
 import * as faIcons from "react-icons/fa";
 import * as mdIcons from "react-icons/md";
@@ -25,7 +26,7 @@ const Sidebar = () => {
           className="flex items-center text-white font-medium bg-blue-600 hover:bg-gray-900 p-2 rounded-lg"
           onClick={() => setSportsOpen(!sportsOpen)}
         >
-          <fcIcons.FcSportsMode />
+          <fcIcons.FcSportsMode className="mr-2" />
           Sports Scores
           <svg
             className="fill-current w-4 h-4 ml-2"
@@ -45,7 +46,7 @@ const Sidebar = () => {
               className="flex items-center text-white font-medium hover:bg-gray-900 p-2 rounded-lg"
               onClick={() => setCricketOpen(!cricketOpen)}
             >
-              <mdIcons.MdSportsCricket />
+              <mdIcons.MdSportsCricket className="mr-2" />
               Cricket
               <svg
                 className="fill-current w-4 h-4 ml-2"
@@ -59,11 +60,12 @@ const Sidebar = () => {
                 )}
               </svg>
             </button>
+            {cricketOpen && <Cricket />}
             <button
               className="flex items-center text-white font-medium hover:bg-gray-900 p-2 rounded-lg"
               onClick={() => setFootballOpen(!footballOpen)}
             >
-              <mdIcons.MdSportsSoccer />
+              <mdIcons.MdSportsSoccer className="mr-2" />
               Football
               <svg
                 className="fill-current w-4 h-4 ml-2"
