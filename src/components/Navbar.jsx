@@ -7,6 +7,9 @@ import Entertainment from "./NavbarComponents/Entertainment";
 
 const API_KEY = "58a6e0b58a6243b8900dc02ef32c8d03";
 const Navbar = ({ selectedTab, setSelectedTab }) => {
+  const reloadPage = () => {
+    window.location.reload();
+  };
   return (
     <div>
       <AppBar
@@ -22,9 +25,9 @@ const Navbar = ({ selectedTab, setSelectedTab }) => {
             sx={{
               cursor: "pointer",
             }}
-            href="#"
+            onClick={reloadPage}
           >
-            NewsFlash
+            <a href="#">NewsFlash</a>
           </Typography>
 
           <Tabs textColor="inherit" sx={{ marginLeft: "auto" }}>
