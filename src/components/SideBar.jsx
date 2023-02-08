@@ -155,7 +155,7 @@ const Sidebar = () => {
                   className="flex items-center text-white font-medium hover:bg-gray-900 p-2 rounded-lg"
                   onClick={() => setLigue1Open(!ligue1Open)}
                 >
-                  Ligue1
+                  Ligue-1
                   <svg
                     className="fill-current w-4 h-4 ml-2"
                     viewBox="0 0 20 20"
