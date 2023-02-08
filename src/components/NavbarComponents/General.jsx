@@ -10,10 +10,10 @@ const General = () => {
     const searchNews = async () => {
       try {
         const response = await fetch(
-          `https://newsapi.org/v2/top-headlines/sources?category=general&apiKey=${apiKey_SG}`
+          `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=58a6e0b58a6243b8900dc02ef32c8d03`
         );
         const data = await response.json();
-        setNews(data.sources);
+        setNews(data.articles);
       } catch (error) {
         console.error(error);
       }
