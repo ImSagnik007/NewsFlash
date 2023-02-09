@@ -41,7 +41,7 @@ const Sidebar = () => {
           </svg>
         </button>
         {sportsOpen && (
-          <div className="bg-gray-800 py-2 ml-8">
+          <div className="bg-gray-800 py-2 ml-4">
             <button
               className="flex items-center text-white font-medium hover:bg-gray-900 p-2 rounded-lg"
               onClick={() => setCricketOpen(!cricketOpen)}
