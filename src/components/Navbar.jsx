@@ -1,14 +1,49 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Tabs, Tab, Button } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Tabs,
+  Tab,
+  Button,
+  Avatar,
+} from "@mui/material";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
-import { Link } from "react-router-dom";
-import Business from "./NavbarComponents/Business";
-import Entertainment from "./NavbarComponents/Entertainment";
+import { auth } from "../firebase.js";
+import firebase from "firebase/compat/app";
+import "firebase/auth";
 
 const API_KEY = "58a6e0b58a6243b8900dc02ef32c8d03";
 const Navbar = ({ selectedTab, setSelectedTab }) => {
   const reloadPage = () => {
     window.location.reload();
+  };
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const signInWithGoogle = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        setUser(result.user);
+        localStorage.setItem("user", JSON.stringify(result.user));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const signOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        setUser(null);
+        localStorage.removeItem("user");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
   return (
     <div>
@@ -19,7 +54,6 @@ const Navbar = ({ selectedTab, setSelectedTab }) => {
       >
         <Toolbar>
           <NewspaperIcon />
-
           <Typography
             variant="h5"
             sx={{
@@ -46,9 +80,30 @@ const Navbar = ({ selectedTab, setSelectedTab }) => {
             />
           </Tabs>
 
-          <Button sx={{ marginLeft: "auto" }} variant="contained">
-            Sign In
-          </Button>
+          {user ? (
+            <>
+              <Avatar
+                sx={{ marginLeft: "auto" }}
+                alt="User Photo"
+                src={user.photoURL}
+              />
+              <Button
+                sx={{ marginLeft: "auto" }}
+                variant="contained"
+                onClick={signOut}
+              >
+                Logout
+              </Button>
+            </>
+          ) : (
+            <Button
+              sx={{ marginLeft: "auto" }}
+              variant="contained"
+              onClick={signInWithGoogle}
+            >
+              Sign In
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </div>
