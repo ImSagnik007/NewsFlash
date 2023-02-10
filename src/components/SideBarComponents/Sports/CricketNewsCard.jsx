@@ -3,7 +3,7 @@ import React from "react";
 const CricketNewsCard = ({ news1 }) => {
   return (
     <>
-      <div className="w-full rounded overflow-hidden shadow-lg bg-gray-500 m-2">
+      <div className="w-full rounded overflow-hidden shadow-lg bg-gray-50 m-2">
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">
             {news1.matchType.toUpperCase()}

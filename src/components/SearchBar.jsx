@@ -12,7 +12,7 @@ const SearchBar = ({ setNews1, searchTerm1, setSearchTerm1 }) => {
   // const [loading, setLoading] = useState(true);
   const searchNews = async (title) => {
     const response = await fetch(
-      `${API_URL}?q=${title}&sortBy=popularity&apiKey=${apiKey_SG}`
+      `${API_URL}?q=${title}&sortBy=popularity&apiKey=${apiKey_SA}`
     );
     const data = await response.json();
     setNews1(data.articles);
