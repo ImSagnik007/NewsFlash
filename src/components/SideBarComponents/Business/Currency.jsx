@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+const apiKey_AR = "CSONBjaLDU0A0twaSdG4crNBnjPeCN1o";
+const apiKey_SA = "NRA4NCrQtXdCXMtSx3x5a59iA7uAUgb7";
+
 const Currency = () => {
   const [result, setResult] = useState(0);
   const [inputValue1, setInputValue1] = useState(0);
@@ -11,7 +14,7 @@ const Currency = () => {
   useEffect(() => {
     const fetchCurrencyOptions = async () => {
       const myHeaders = new Headers();
-      myHeaders.append("apikey", "NRA4NCrQtXdCXMtSx3x5a59iA7uAUgb7");
+      myHeaders.append("apikey", apiKey_SA);
 
       const requestOptions = {
         method: "GET",
