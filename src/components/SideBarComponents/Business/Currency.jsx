@@ -14,7 +14,7 @@ const Currency = () => {
   useEffect(() => {
     const fetchCurrencyOptions = async () => {
       const myHeaders = new Headers();
-      myHeaders.append("apikey", apiKey_AR);
+      myHeaders.append("apikey", apiKey_SA);
 
       const requestOptions = {
         method: "GET",
