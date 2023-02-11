@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import FootballNewsCard from "../FootballNewsCard";
 import Tri from "../../../Loaders/Triangle";
 
+const apiKey_AR = "6dcc36f686msh40ba53b28ada5d1p1300c0jsn483767e97d25";
+const apiKey_SA = "543fd8b79cmsh4cbb981fecd88b8p10e7a7jsn1fd444155ef9";
+const apiKey_SG = "92d922663fmshee7216999bd1f87p1efd81jsn516d82657ca9";
+
 const EPL = () => {
   const [news, setNews] = useState(null);
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "543fd8b79cmsh4cbb981fecd88b8p10e7a7jsn1fd444155ef9",
+      "X-RapidAPI-Key": apiKey_AR,
       "X-RapidAPI-Host": "sofasport.p.rapidapi.com",
     },
   };

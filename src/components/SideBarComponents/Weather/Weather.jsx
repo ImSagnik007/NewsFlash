@@ -5,6 +5,10 @@ import WeatherCard from "./WeatherCard";
 // import Tri from "../Loaders/Triangle";
 // import cold from ".../media/cold-bg.jpeg";
 
+const apiKey_SA = "ac0434eb5de8192aa5b74eb65f2aa023";
+const apiKey_AR = "4845071068f5fd3dee7126ea9ea3764f";
+const apiKey_SG = "ab56482971bd876b862a3b6d5347168a";
+
 const Weather = () => {
   const [weather, setWeather] = useState(null);
   const [main, setMain] = useState(null);

@@ -5,6 +5,7 @@ import CricketNewsCard from "./CricketNewsCard";
 
 const apiKey_SO = "7c0a7dd7-a8bc-4bcf-abae-fd072b0cad28";
 const apiKey_SA = "18d2c9e8-c16b-4db8-afca-1cc29a3eff3f";
+const apiKey_AR = "7afdbe8c-5cb3-4a96-a989-2081645755a2";
 
 const Cricket = () => {
   const [news, setNews] = useState(null);
