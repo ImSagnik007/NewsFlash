@@ -9,7 +9,11 @@ const FootballNewsCard = ({ news1 }) => {
     <>
       <div className="w-full mt-2 mb-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-500 ">
         <a href="#">
-          <img className="rounded-t-lg" src={news1.thumbnailUrl} alt="" />
+          <img
+            className="rounded-t-lg w-full"
+            src={news1.thumbnailUrl}
+            alt=""
+          />
         </a>
         <div className="p-5">
           <a href="#">
